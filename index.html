@@ -1,120 +1,188 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Календарь лернинг рейта</title>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Календарь лернинг рейта</title>
+  <style>
     body {
-        margin: 0;
-        padding: 20px;
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        color: #333;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
     }
+
     .container {
-        max-width: 800px;
-        margin: auto;
-        background: #fff;
-        padding: 20px;
-        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     }
+
     h1 {
-        color: #2e7d32; /* green */
-        margin: 0 0 10px 0;
+      font-size: 1.8rem;
+      margin-bottom: 0.2rem;
+      color: #2e7d32;
     }
+
     h2 {
-        color: #ffc107; /* yellow */
-        margin: 0 0 20px 0;
+      font-size: 1.4rem;
+      margin-top: 0;
+      color: #ffc107;
     }
+
     p {
-        margin: 0 0 10px 0;
+      font-size: 1rem;
+      margin-bottom: 1rem;
     }
+
     a.next-month {
-        display: inline-block;
-        margin: 15px 0;
-        padding: 8px 12px;
-        border: 2px solid #ccc;
-        border-radius: 4px;
-        text-decoration: none;
-        color: #333;
-        background-color: #fff;
+      display: inline-block;
+      margin: 15px 0;
+      padding: 10px 16px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      text-decoration: none;
+      color: #333;
+      background-color: #fff;
+      font-size: 1rem;
     }
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0;
-    }
+
+	* {
+	  box-sizing: border-box;
+	}
+
+	.table-wrapper {
+	  width: 100%;
+	  overflow-x: auto;
+	}
+
+	table {
+	  width: 100%;
+	  border-collapse: collapse;
+	  margin: 20px 0;
+	  min-width: unset;
+	  table-layout: auto;
+	}
+
     thead th {
-        padding: 8px;
-        border-bottom: 2px solid #ddd;
+      padding: 10px;
+      font-size: 0.95rem;
     }
+
     thead th:nth-child(1) {
-        background-color: #0d6efd; /* blue */
-        color: #fff;
+      background-color: #0d6efd;
+      color: #fff;
     }
+
     thead th:nth-child(2) {
-        background-color: #198754; /* green */
-        color: #fff;
+      background-color: #198754;
+      color: #fff;
     }
+
     thead th:nth-child(3) {
-        background-color: #ffc107; /* yellow */
-        color: #000;
+      background-color: #ffc107;
+      color: #000;
     }
+
     thead th:nth-child(4) {
-        background-color: #dc3545; /* red */
-        color: #fff;
+      background-color: #dc3545;
+      color: #fff;
     }
+
     tbody td {
-        padding: 8px;
-        border-bottom: 1px solid #eee;
+      padding: 10px;
+      font-size: 0.95rem;
+      border-bottom: 1px solid #eee;
     }
+
     td.sign a {
-        color: #000;
-        text-decoration: none;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
     }
-    td.sign a .arrow {
-        color: #dc3545;
+
+    td.sign .arrow {
+      color: #dc3545;
     }
+
     td.favorable {
-        color: #198754; /* green text */
+      color: #198754;
     }
+
     td.neutral {
-        color: #6c757d; /* gray text */
+      color: #6c757d;
     }
+
     td.unfavorable {
-        color: #dc3545; /* red text */
+      color: #dc3545;
     }
+
     .footer {
-        text-align: center;
-        font-size: 0.9em;
-        color: #555;
-        margin-top: 30px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 30px;
     }
+
     .footer a {
-        color: #555;
-        text-decoration: none;
-        margin: 0 5px;
+      color: #555;
+      text-decoration: none;
+      margin: 0 8px;
     }
-</style>
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+
+      a.next-month {
+        font-size: 0.95rem;
+        padding: 8px 12px;
+      }
+
+      table {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-  <h1>Календарь лернинг рейта.</h1>
-  <h2>Июнь 2025</h2>
-  <p>Эта информация адресована тем, кто планирует обучать модели в ближайшее время. Специально для нашего ресурса аналитик Елена Андреевна Кузнецова высчитала наиболее подходящие уровни лернинг рейта для этой задачи всем знакам зодиака (см. таблицу).</p>
-  <a href="#" class="next-month">Прогноз на следующий месяц →</a>
-  <table>
-    <thead>
-      <tr>
-        <th>Знак зодиака</th>
-        <th>Благоприятные уровни лернинг рейта</th>
-        <th>Нейтральные уровни лернинг рейта</th>
-        <th>Неблагоприятные уровни лернинг рейта</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
+  <div class="container">
+    <h1>Календарь лернинг рейта.</h1>
+    <h2>Июнь 2025</h2>
+    <p>
+      Эта информация адресована тем, кто планирует обучать модели в ближайшее
+      время. Специально для нашего ресурса аналитик Елена Андреевна Кузнецова
+      высчитала наиболее подходящие уровни лернинг рейта для этой задачи всем
+      знакам зодиака (см. таблицу).
+    </p>
+    <a href="#" class="next-month">Прогноз на следующий месяц →</a>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Знак зодиака</th>
+            <th>Благоприятные уровни</th>
+            <th>Нейтральные уровни</th>
+            <th>Неблагоприятные уровни</th>
+          </tr>
+        </thead>
+        <tbody>
+              <tr>
         <td class="sign"><a href="#">Овен <span class="arrow">→</span></a></td>
         <td class="favorable">0.01 0.03 0.05 0.07 0.1 0.2</td>
         <td class="neutral">0.005 0.008 0.12 0.15 0.18 0.25</td>
@@ -186,13 +254,20 @@
         <td class="neutral">0.008 0.01 0.011 0.013 0.014</td>
         <td class="unfavorable">0.001 0.003 0.007 0.09 0.1</td>
       </tr>
-    </tbody>
-  </table>
-  <div class="footer">
-    <p>LerningRateHoroscope.ru © 2025</p>
-    <p><a href="#">почта</a> | <a href="https://t.me/allofthestarshaveareason">телеграм</a> | <a href="#">андроид</a> | <a href="#">API</a></p>
+	</tbody>
+      </table>
+    </div>
+
+    <div class="footer">
+      <p>LerningRateHoroscope.ru © 2025</p>
+      <p>
+        <a href="#">почта</a> |
+        <a href="#">телеграм</a> |
+        <a href="#">андроид</a> |
+        <a href="#">API</a>
+      </p>
+    </div>
   </div>
-</div>
 </body>
 </html>
 
