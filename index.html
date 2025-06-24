@@ -162,7 +162,7 @@
     <body>
         <div class="container">
             <h1>Календарь лернинг рейта.</h1>
-            <h2>Июнь 2025</h2>
+            <h2 id="month-year"></h2>
             <p>
                 Эта информация адресована тем, кто планирует обучать модели в ближайшее время. Специально для нашего ресурса аналитик Елена Андреевна Кузнецова высчитала наиболее подходящие уровни лернинг рейта для ваших моделей всем знакам
                 зодиака (см. таблицу).
@@ -179,115 +179,148 @@
                             <th>Неблагоприятные уровни лернинг рейта</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td class="sign">
-                                <a href="#">Овен <span class="arrow">→</span></a>
-                            </td>
-                            <td class="favorable">0.01 0.03 0.05 0.07 0.1 0.2</td>
-                            <td class="neutral">0.005 0.008 0.12 0.15 0.18 0.25</td>
-                            <td class="unfavorable">0.001 0.002 0.0005 0.0001 0.3 0.4</td>
-                        </tr>
-                        <tr>
-                            <td class="sign">
-                                <a href="#">Телец <span class="arrow">→</span></a>
-                            </td>
-                            <td class="favorable">0.002 0.004 0.008 0.012 0.015 0.02</td>
-                            <td class="neutral">0.03 0.04 0.06 0.09 0.11 0.13</td>
-                            <td class="unfavorable">0.005 0.001 0.025 0.035 0.08 0.1</td>
-                        </tr>
-                        <tr>
-                            <td class="sign">
-                                <a href="#">Близнецы <span class="arrow">→</span></a>
-                            </td>
-                            <td class="favorable">0.005 0.010 0.020 0.025 0.030</td>
-                            <td class="neutral">0.001 0.006 0.007 0.015 0.018</td>
-                            <td class="unfavorable">0.050 0.100 0.200 0.500 0.8</td>
-                        </tr>
-                        <tr>
-                            <td class="sign">
-                                <a href="#">Рак <span class="arrow">→</span></a>
-                            </td>
-                            <td class="favorable">0.01 0.015 0.02 0.025 0.03</td>
-                            <td class="neutral">0.005 0.008 0.009 0.011 0.02</td>
-                            <td class="unfavorable">0.0005 0.0008 0.001 0.002 0.5</td>
-                        </tr>
-                        <tr>
-                            <td class="sign">
-                                <a href="#">Лев <span class="arrow">→</span></a>
-                            </td>
-                            <td class="favorable">0.03 0.04 0.05 0.06</td>
-                            <td class="neutral">0.007 0.008 0.009 0.01 0.02</td>
-                            <td class="unfavorable">0.001 0.002 0.003 0.008 0.5</td>
-                        </tr>
-                        <tr>
-                            <td class="sign">
-                                <a href="#">Дева <span class="arrow">→</span></a>
-                            </td>
-                            <td class="favorable">0.001 0.002 0.003 0.005 0.008</td>
-                            <td class="neutral">0.006 0.009 0.010 0.012 0.02</td>
-                            <td class="unfavorable">0.020 0.03 0.06 0.09 0.1</td>
-                        </tr>
-                        <tr>
-                            <td class="sign">
-                                <a href="#">Весы <span class="arrow">→</span></a>
-                            </td>
-                            <td class="favorable">0.02 0.025 0.03 0.04 0.05</td>
-                            <td class="neutral">0.008 0.01 0.015 0.017 0.019</td>
-                            <td class="unfavorable">0.001 0.002 0.004 0.1 0.15</td>
-                        </tr>
-                        <tr>
-                            <td class="sign">
-                                <a href="#">Скорпион <span class="arrow">→</span></a>
-                            </td>
-                            <td class="favorable">0.01 0.02 0.025 0.03 0.04</td>
-                            <td class="neutral">0.007 0.009 0.011 0.013 0.017</td>
-                            <td class="unfavorable">0.001 0.003 0.005 0.08 0.1</td>
-                        </tr>
-                        <tr>
-                            <td class="sign">
-                                <a href="#">Стрелец <span class="arrow">→</span></a>
-                            </td>
-                            <td class="favorable">0.03 0.04 0.05 0.06 0.08</td>
-                            <td class="neutral">0.008 0.01 0.012 0.02 0.025</td>
-                            <td class="unfavorable">0.001 0.002 0.004 0.1 0.12</td>
-                        </tr>
-                        <tr>
-                            <td class="sign">
-                                <a href="#">Козерог <span class="arrow">→</span></a>
-                            </td>
-                            <td class="favorable">0.005 0.01 0.015 0.02 0.03</td>
-                            <td class="neutral">0.006 0.008 0.009 0.01 0.015</td>
-                            <td class="unfavorable">0.001 0.002 0.003 0.05 0.06</td>
-                        </tr>
-                        <tr>
-                            <td class="sign">
-                                <a href="#">Водолей <span class="arrow">→</span></a>
-                            </td>
-                            <td class="favorable">0.01 0.02 0.025 0.03 0.04</td>
-                            <td class="neutral">0.007 0.009 0.011 0.012 0.017</td>
-                            <td class="unfavorable">0.001 0.002 0.005 0.08 0.09</td>
-                        </tr>
-                        <tr>
-                            <td class="sign">
-                                <a href="#">Рыбы <span class="arrow">→</span></a>
-                            </td>
-                            <td class="favorable">0.02 0.03 0.04 0.05 0.06</td>
-                            <td class="neutral">0.008 0.01 0.011 0.013 0.014</td>
-                            <td class="unfavorable">0.001 0.003 0.007 0.09 0.1</td>
-                        </tr>
+                    <tbody id="zodiac-data">
+                        <!-- Данные будут заполнены скриптом -->
                     </tbody>
                 </table>
             </div>
 
             <div class="footer">
-                <p>LerningRateHoroscope.ru © 2025</p>
+                <p>LerningRateHoroscope.ru © <span id="current-year"></span></p>
                 <p>
-                    <a href="#">почта</a> | <a href="#">телеграм</a> | <a href="#">андроид</a> |
+                    <a href="#">почта</a> | <a href="https://t.me/allofthestarshaveareason">телеграм</a> | <a href="#">андроид</a> |
                     <a href="#">API</a>
                 </p>
             </div>
         </div>
+
+        <script>
+            // Функция для получения названия месяца на русском
+            function getRussianMonthName(monthIndex) {
+                const months = [
+                    'Январь',
+                    'Февраль',
+                    'Март',
+                    'Апрель',
+                    'Май',
+                    'Июнь',
+                    'Июль',
+                    'Август',
+                    'Сентябрь',
+                    'Октябрь',
+                    'Ноябрь',
+                    'Декабрь',
+                ];
+                return months[monthIndex];
+            }
+
+            // Функция для генерации случайных learning rates на основе seed
+            function generateLearningRates(seed, count) {
+                const rates = [];
+                const rng = new Math.seedrandom(seed);
+                
+                for (let i = 0; i < count; i++) {
+                    // Генерируем числа в разных диапазонах для разнообразия
+                    let rate;
+                    const choice = Math.floor(rng() * 3);
+                    
+                    if (choice === 0) {
+                        // Маленькие значения (0.0001 - 0.01)
+                        rate = (rng() * 0.0099 + 0.0001).toFixed(4);
+                    } else if (choice === 1) {
+                        // Средние значения (0.01 - 0.1)
+                        rate = (rng() * 0.09 + 0.01).toFixed(3);
+                    } else {
+                        // Большие значения (0.1 - 0.9)
+                        rate = (rng() * 0.8 + 0.1).toFixed(2);
+                    }
+                    
+                    // Удаляем лишние нули в конце
+                    rate = parseFloat(rate).toString();
+                    if (!rates.includes(rate)) {
+                        rates.push(rate);
+                    } else {
+                        i--; // Повторяем итерацию, если число уже есть в массиве
+                    }
+                }
+                
+                return rates.sort((a, b) => parseFloat(a) - parseFloat(b)).slice(0, count);
+            }
+
+            // Функция для заполнения таблицы
+            function populateTable() {
+                const now = new Date();
+                const currentMonth = now.getMonth();
+                const currentYear = now.getFullYear();
+                
+                // Устанавливаем месяц и год в заголовке
+                document.getElementById('month-year').textContent = `${getRussianMonthName(currentMonth)} ${currentYear}`;
+                document.getElementById('current-year').textContent = currentYear;
+                
+                // Список знаков зодиака
+                const zodiacSigns = [
+                    'Овен', 'Телец', 'Близнецы', 'Рак', 
+                    'Лев', 'Дева', 'Весы', 'Скорпион', 
+                    'Стрелец', 'Козерог', 'Водолей', 'Рыбы'
+                ];
+                
+                const tableBody = document.getElementById('zodiac-data');
+                tableBody.innerHTML = '';
+                
+                // Для каждого знака зодиака генерируем данные
+                zodiacSigns.forEach(sign => {
+                    // Создаем уникальный seed для каждого знака на основе месяца, года и названия знака
+                    const seed = `${currentMonth}-${currentYear}-${sign}`;
+                    
+                    // Генерируем learning rates
+                    const favorableRates = generateLearningRates(seed + '-favorable', 5);
+                    const neutralRates = generateLearningRates(seed + '-neutral', 5);
+                    const unfavorableRates = generateLearningRates(seed + '-unfavorable', 5);
+                    
+                    // Создаем строку таблицы
+                    const row = document.createElement('tr');
+                    
+                    // Колонка с названием знака
+                    const signCell = document.createElement('td');
+                    signCell.className = 'sign';
+                    signCell.innerHTML = `<a href="#">${sign} <span class="arrow">→</span></a>`;
+                    
+                    // Колонка с благоприятными значениями
+                    const favorableCell = document.createElement('td');
+                    favorableCell.className = 'favorable';
+                    favorableCell.textContent = favorableRates.join(' ');
+                    
+                    // Колонка с нейтральными значениями
+                    const neutralCell = document.createElement('td');
+                    neutralCell.className = 'neutral';
+                    neutralCell.textContent = neutralRates.join(' ');
+                    
+                    // Колонка с неблагоприятными значениями
+                    const unfavorableCell = document.createElement('td');
+                    unfavorableCell.className = 'unfavorable';
+                    unfavorableCell.textContent = unfavorableRates.join(' ');
+                    
+                    // Добавляем ячейки в строку
+                    row.appendChild(signCell);
+                    row.appendChild(favorableCell);
+                    row.appendChild(neutralCell);
+                    row.appendChild(unfavorableCell);
+                    
+                    // Добавляем строку в таблицу
+                    tableBody.appendChild(row);
+                });
+            }
+
+            // Используем seedrandom.js для детерминированной генерации случайных чисел
+            // (добавляем скрипт динамически, если его нет на странице)
+            if (typeof Math.seedrandom !== 'function') {
+                const script = document.createElement('script');
+                script.src = 'https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js';
+                script.onload = populateTable;
+                document.head.appendChild(script);
+            } else {
+                populateTable();
+            }
+        </script>
     </body>
 </html>
-
